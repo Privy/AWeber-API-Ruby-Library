@@ -123,7 +123,7 @@ module AWeber
     end
 
     def fetch_entry(id)
-      @klass.new(client, get(path).merge(:parent => self))
+      @klass.new(client, get("#{path}/#{id}").merge(:parent => self))
     end
 
     def fetch_next_group()
